@@ -1,0 +1,51 @@
+
+        child: Column(
+          children: <Widget>[
+            //logo
+            Image.asset('assets/images/slogo.PNG'),
+            const Text(
+              'Login',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 40),
+            ),
+            //email
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 40),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  hintText: 'Email',
+                  icon: Icon(Icons.email),
+                ),
+              ),
+            ),
+            //space between email and password
+            const SizedBox(
+              height: 30,
+            ),
+            //Password
+            Padding(padding: const EdgeInsets.symmetric(horizontal: 40),
+            child: TextFormField(
+              decoration: const InputDecoration(
+                hintText: 'Password',
+                icon: Icon(Icons.lock),
+              ),
+              obscureText: true,
+            ),
+            ),
+            //forgot password section/function
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Padding(padding: EdgeInsets.symmetric(horizontal: 40),
+                child: Text('Forgot Password?'),
+                ),
+                //TODO forgot password function
+                GestureDetector(
+                  onTap: () {
+                  },
+                ),
+              ],
+            ),
+
+          ],
+        ),
