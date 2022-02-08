@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter/services.dart';
 import 'Screens/login.dart';
 
 void main() {
   runApp(const MyApp());
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
 }
 
 class MyApp extends StatelessWidget {
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+
       title: 'Our App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
